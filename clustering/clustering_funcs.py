@@ -49,7 +49,7 @@ def merge_cluster_data(outPath):
                                                                 "MOV_sim":None,
                                                                 "ENTIRE_sim":None}, ignore_index=True)
 
-    clustered_df.to_csv(outPath, index=False)
+    clustered_df.to_csv(outPath, compression = "gzip", index=False)
     
     return clustered_df
     
