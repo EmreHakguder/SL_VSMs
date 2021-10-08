@@ -32,14 +32,15 @@ def vectorize_phonology(somePhonDF_Path, phonColumnsDict="data/raw/phonologyData
         if phonType == "MOV":
             N_components = int(len(A.columns)-1)
         else:
-            N_components = int(len(A.columns)/3) #100 is a good number for ENTIRE
+            N_components = int(len(A.columns)/3)
             
         svd =  TruncatedSVD(n_components = N_components)
         A_transf = svd.fit_transform(A)
         A_transf.shape
         
-        print("explained_variance_ratio_:", sum(svd.explained_variance_ratio_))
-        print("Transformed Matrix after reducing to "+str(N_components)+" features:")
+        print(str(len(phon_df_col_oneHot)) + " columns reduced to "+str(N_components)+" columns.")
+        print("explained_variance_ratio_:", sum(svd.explained_variance_ratio_), "\n\n")
+        
 
         phon_df_col_oneHot_svd = pd.DataFrame(A_transf, index=A.index)
         phon_df_col_oneHot_svd = phon_df_col_oneHot_svd.reset_index()
