@@ -20,8 +20,8 @@ def merge_cluster_data(outPath):
     dims = ["50d", "100d", "200d", "300d"]
     masterPath = "results/clustering/signPairs_byCluster/"
     
-    clustered_df = pd.DataFrame(columns=["language", "dim", "height", "clusterID", "signPair",
-                                         "semSim", "HS_sim", "LOC_sim", "MOV_sim", "ENTIRE_sim"])
+    if not os.path.exists(outPath):
+        os.makedirs(outPath)
 
     for language in languages:
         for dim in dims:
@@ -29,6 +29,9 @@ def merge_cluster_data(outPath):
             heights = [x.split("_")[3] for x in os.listdir(list_height_path) if not x.startswith(".")]
 
             for heit in heights:
+                clustered_df = pd.DataFrame(columns=["language", "dim", "height", "clusterID", "signPair",
+                                         "semSim", "HS_sim", "LOC_sim", "MOV_sim", "ENTIRE_sim"])
+                
                 path = list_height_path+language+"_"+dim+"_heightheight_"+str(heit)+"_signPairs_byCluster.json"
                 print(path)
 
@@ -49,7 +52,7 @@ def merge_cluster_data(outPath):
                                                                 "MOV_sim":None,
                                                                 "ENTIRE_sim":None}, ignore_index=True)
 
-    clustered_df.to_csv(outPath, compression = "gzip", index=False)
+                clustered_df.to_csv(outPath+str(language)+"_"+str(dim)+"_"+str(heit)+".csv.gz", compression="gzip", index=False)
     
     return clustered_df
     
