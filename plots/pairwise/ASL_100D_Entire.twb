@@ -199,6 +199,32 @@
         </edge>
       </cards>
       <viewpoint>
+        <selection-collection>
+          <tuple-selection>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1isxjzq0ruwicn1dsx3ww0iguuo1].[sum:ENTIRE_cosineSim:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1isxjzq0ruwicn1dsx3ww0iguuo1].[sum:sem_cosineSim:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1isxjzq0ruwicn1dsx3ww0iguuo1].[none:paired:nk]</field>
+                  <field>[federated.1isxjzq0ruwicn1dsx3ww0iguuo1].[sum:ENTIRE_cosineSim:qk]</field>
+                  <field>[federated.1isxjzq0ruwicn1dsx3ww0iguuo1].[sum:sem_cosineSim:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;again + play&quot;</value>
+                <value>0.3987</value>
+                <value>0.72860000000000003</value>
+              </tuple>
+            </tuple-reference>
+          </tuple-selection>
+        </selection-collection>
         <highlight>
           <color-one-way>
             <field>[federated.1isxjzq0ruwicn1dsx3ww0iguuo1].[none:paired:nk]</field>
