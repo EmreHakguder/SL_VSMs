@@ -276,8 +276,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='12' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='97564' id='11' param='vert' type-v2='layout-flow' w='98686' x='657' y='1218'>
+            <zone h='100000' id='14' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97564' id='13' param='vert' type-v2='layout-flow' w='98686' x='657' y='1218'>
                 <zone fixed-size='280' h='97564' id='3' is-fixed='true' name='Sheet 1' w='85539' x='657' y='1218'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -311,7 +311,7 @@
     </dashboard>
   </dashboards>
   <windows source-height='30'>
-    <window class='worksheet' maximized='true' name='Sheet 1'>
+    <window class='worksheet' name='Sheet 1'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -349,13 +349,13 @@
       </viewpoint>
       <simple-id uuid='{665B51A3-5145-46B3-B677-0A10C6015A82}' />
     </window>
-    <window class='dashboard' name='Dashboard 1'>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
       <viewpoints>
         <viewpoint name='Sheet 1'>
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='3' />
+      <active id='-1' />
       <simple-id uuid='{D44B3A29-DBB5-480F-A3EA-8ECDEAEA6DCF}' />
     </window>
   </windows>
