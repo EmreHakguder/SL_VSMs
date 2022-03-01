@@ -49,7 +49,8 @@ The phonological transcriptions of the signs for the two languages come from two
 
 ## Structure and Overview of the Repository
 
-
+[PLACEHOLDER]
 
 ## License
 
+The materials in this repo are licensed under the [MIT License](https://github.com/EmreHakguder/SL_VSMs/blob/main/LICENSE).
